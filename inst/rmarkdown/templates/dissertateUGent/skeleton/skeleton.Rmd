@@ -7,7 +7,9 @@ output:
     latex_engine: xelatex
     includes:
       in_header: preamble.tex
+    citation_package: "natbib"
     keep_tex: yes
+bibliography: Bibliography.bib
 geometry: [top=1in, bottom=1in, right=1in, left=1.5in]
 params:
   year: '2018'
@@ -46,7 +48,11 @@ dissertateUGent::preamble_for_title()
 \chapter*{ABSTRACT}
 \addcontentsline{toc}{section}{Abstract}
 
-Abstract words.
+Load the abstract from separate `abstract.Rmd` file:
+````r
+`r ''````{r child = "abstract.Rmd"}
+```
+````
 
 <!-- Public Abstract -->
 \newpage
@@ -109,7 +115,11 @@ Acknowledge them.
 
 \chapter{INTRODUCTION}
 
-Introduce the thing.
+Load intro from separate `introduction.Rmd` file:
+````r
+`r ''````{r child = "introduction.Rmd"}
+```
+````
 
 \FloatBarrier
 
@@ -121,7 +131,12 @@ Introduce the thing.
 
 \chapter{Chapter 2's Title}
 
-Tells us more.
+Add some fancy table
+```{r}
+knitr::kable(data.frame('things I am about' = c('dogs', 'cats', 'ice cream'),
+                        'mean of things' = rnorm(3)),
+             caption = 'Fun things are really something!')
+```
 
 \FloatBarrier
 
@@ -170,3 +185,48 @@ Well done.
 \setlength{\leftskip}{0.4in}
 \setlength{\parskip}{6pt}
 \noindent
+
+<div id="refs"></div>
+
+\clearpage
+\addcontentsline{toc}{chapter}{APPENDICES}
+\fancyhead[L]{Appendices}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\vspace*{\fill}
+  \begin{center}
+    APPENDICES
+  \end{center}
+\vspace*{\fill}
+
+\clearpage
+````r
+`r ''````{r child = "chapter5_appendix.Rmd", size="tiny"}
+```
+````
+\clearpage
+````r
+`r ''````{r child = "chapter6_appendix.Rmd", size="tiny"}
+```
+````
+
+\clearpage
+\addcontentsline{toc}{chapter}{CURRICULUM VITA}
+\fancyhead[L]{Vita}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\vspace*{\fill}
+  \begin{center}
+    CURRICULUM VITA
+  \end{center}
+\vspace*{\fill}
+
+\clearpage
+
+<!-- TODO: Download last version of the cv from github -->
+````r
+`r ''````{r child = "cv_latest.Rmd"}
+```
+````
