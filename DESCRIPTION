@@ -9,10 +9,13 @@ Maintainer: Antoine Pingault <antoine.pingault@ugent.be>
 Description: Provides the template and functions that make writing a dissertation
     at Ghent University easier, based on dissertateUSU by Tyson Barrett.
 Depends: R (>= 3.4.3)
-License: MIT
+License: MIT + file LICENSE
+URL: https://github.com.be/apingaul/dissertateUGent
+BugReports: https://github.ugent.be/apingaul/dissertateUGent/issues
 Imports:
     rmarkdown,
     knitr
 Encoding: UTF-8
 LazyData: true
+s: 6.0.1
 RoxygenNote: 6.0.1
