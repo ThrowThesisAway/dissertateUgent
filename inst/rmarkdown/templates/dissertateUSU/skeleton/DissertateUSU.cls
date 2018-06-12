@@ -1,17 +1,18 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
-%     filename        = "DissertateUSU.cls",
+%     filename        = "DissertateUGent.cls",
 %     version         = "1.0",
-%     date            = "01 July 2017",
+%     date            = "01 May 2018",
 %     codetable       = "ISO/ASCII",
 %     keywords        = "LaTeX, Dissertate",
 %     note            = "Based on 'Dissertate' by Jordan Suchow,
-%                        For support, email 'tyson.barrett@usu.edu',
-%     docstring       = "Class for a dissertation at Utah State."
+%                        and 'dissertateUSU' by Tyson Barrett
+%                        For support, email 'antoine.pingault@ugent.be',
+%     docstring       = "Class for a dissertation at UGent."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{DissertateUSU}[2017/07/01 v1.0 DissertateUSU Class]
+\ProvidesClass{DissertateUGent}[2017/07/01 v1.0 DissertateUGent Class]
 \LoadClass[12pt, oneside, letterpaper]{book}
 
 %%%%%%%%%%%%%%%%%
@@ -112,7 +113,7 @@
     % vspace adjusts spacing to get a doublespace between table headings
     % and table contents
     % \vspace{\baselineskip}
-    \@starttoc{lot}     
+    \@starttoc{lot}
     \newpage
     % \doublespaced
 }
@@ -126,21 +127,21 @@
 %% LAYOUT: List of FIGURES -auto fill %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %{{{ List of Figures
-% LoF should be single-spaced within entries and double-spaced between entries 
+% LoF should be single-spaced within entries and double-spaced between entries
 \renewcommand*{\listoffigures}{
     \singlespaced
     % \vskip0pt
     \chapter*{\begin{center} \textnormal{LIST OF FIGURES} \end{center}}
     \addcontentsline{toc}{section}{LIST OF FIGURES}
     % \addcontentsline{toc}{chapter}{\textnormal{LIST OF FIGURES}}
-    % \addvspace{10pt} 
+    % \addvspace{10pt}
     % \typeout{!! List of Figures...!!}
     \noindent Figure \hfill Page\\         % newline allows us to use a vspace...
     % vspace adjusts spacing to get a doublespace between table headings
     % and table contents
-    % \vspace{\baselineskip} 
-    \@starttoc{lof}     
-    \newpage 
+    % \vspace{\baselineskip}
+    \@starttoc{lof}
+    \newpage
     % \doublespaced
 }
 % Ensure double-spacing between entries
@@ -206,42 +207,40 @@
 	\doublespaced
 	\MakeUppercase{\@title}\\
 	by\\
-	\@author \\ 
+	\@author \\
 	\singlespaced
 	A dissertation submitted in partial fulfillment\\
 	of the requirements for the degree \\
 	\doublespaced
-	of\\ 
+	of\\
 	\MakeUppercase{\degree} \\
-	in\\ 
+	in\\
 	\singlespaced
   \field \\
-	\end{center} 
+	\end{center}
 	\vspace{12pt}
 	\noindent Approved: \\
 	\vspace{20pt}
 	\begin{tabular}{ll}
 	  \centering
-    \makebox[2.75in]{\hrulefill} & \makebox[2.7in]{\hrulefill}\\    
+    \makebox[2.75in]{\hrulefill} & \makebox[2.7in]{\hrulefill}\\
     \chairperson                 & \committeeone \\
     Major Professor              & Committee Member \\
     & \\
     & \\
-    \makebox[2.75in]{\hrulefill} & \makebox[2.75in]{\hrulefill}\\    
+    \makebox[2.75in]{\hrulefill} & \makebox[2.75in]{\hrulefill}\\
     \committeetwo                & \committeethree \\
     Committee Member             & Committee Member \\
     & \\
     & \\
-    \makebox[2.75in]{\hrulefill} & \makebox[2.75in]{\hrulefill}\\    
-    \committeefour               & \gradschoolguy \\
-    Committee Member             & Vice President for Research and \\
-                                 & Dean of the School of Graduate Studies \\
+    \makebox[2.75in]{\hrulefill} & \makebox[2.75in]{\hrulefill}\\
+    \committeefour               & \committeeinvited \\
+    Invited Committee Member             & Invited \\
     \end{tabular}
   \vspace{10pt}
     \begin{center}
 	  \singlespacing
-      UTAH STATE UNIVERSITY\\ 
-	    Logan, Utah\\
+      Universiteit Gent\\
 	    \doublespacing
 	    \yeardegree
 	  \end{center}
@@ -257,8 +256,8 @@
 	\vspace*{\fill}
   \begin{center}
 	\doublespacing
-	Copyright \hspace{3pt} 
-	  \scshape \small \copyright  \hspace{3pt} 
+	Copyright \hspace{3pt}
+	  \scshape \small \copyright  \hspace{3pt}
 	  \@author \hspace{3pt} \yeardegree\\
 	All Rights Reserved
   \end{center}

@@ -1,6 +1,6 @@
 ---
-documentclass: DissertateUSU
-title: 'Dissertating for USU'
+documentclass: DissertateUGent
+title: 'Dissertating for UGent'
 author: You
 output:
   pdf_document:
@@ -18,18 +18,18 @@ params:
   committee2: 'Committee Member 2'
   committee3: 'Committee Member 3'
   committee4: 'Committee Member 4'
-  gradschool: 'The Graduate School Individual'
-    
+  invited: 'Invited Member'
+
 ---
 
 ```{r global_options, include=FALSE}
 ## This saves you from having to do this for every chunk
 knitr::opts_chunk$set(fig.path = 'figures/',
-                      echo = FALSE, 
-                      warning = FALSE, 
+                      echo = FALSE,
+                      warning = FALSE,
                       message = FALSE)
 ## Do NOT Remove
-dissertateUSU::preamble_for_title()
+dissertateUGent::preamble_for_title()
 ```
 
 <!-- Title page printed automatically -->

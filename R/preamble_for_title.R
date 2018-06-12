@@ -15,7 +15,7 @@ preamble_for_title = function(file = "preamble.tex"){
       "\\newcommand{\\committeetwo}{", params$committee2, "}\n",
       "\\newcommand{\\committeethree}{", params$committee3, "}\n",
       "\\newcommand{\\committeefour}{", params$committee4, "}\n",
-      "\\newcommand{\\gradschoolguy}{", params$gradschool, "}\n",
+      "\\newcommand{\\committeeinvited}{", params$invited, "}\n",
       "% Tables
       \\usepackage{booktabs}
       \\usepackage{threeparttable}

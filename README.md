@@ -1,8 +1,9 @@
-# `dissertateUSU`
+# `dissertateUGent`
 
-Materials for writing a dissertation at Utah State University in R Markdown. The package is very new and undergoing a lot of development but should work at this point.
+Materials for writing a dissertation at Ghent University in R Markdown.
+This package is forked from https://github.com/TysonStanley/dissertateUSU/
 
 Includes:
 
-1. Template to knit 
+1. Template to knit
 2. Functions that help make this simpler
