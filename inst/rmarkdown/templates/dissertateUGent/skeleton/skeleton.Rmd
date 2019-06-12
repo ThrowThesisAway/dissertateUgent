@@ -12,6 +12,8 @@ output:
 bibliography: Bibliography.bib
 geometry: [top=1in, bottom=1in, right=1in, left=1.5in]
 params:
+  promoter: 'PhD promoter'
+  promoter2: 'second promoter'
   year: '2018'
   degree: 'Degree'
   field: 'Field'
@@ -39,50 +41,40 @@ dissertateUGent::preamble_for_title()
 \pagestyle{empty}
 \copyrightpage
 
-<!-- Abstract -->
+<!-- Acknowledgements: unumbered section -->
+\newpage
+\fancyhead[L]{Acknowledgments}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+## Acknowledgments {.unnumbered}
+
+Acknowledge them.
+
+<!-- Abstract: unumbered section -->
 \newpage
 \pagestyle{fancy}
 \fancyhead[L]{Abstract}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
-\chapter*{ABSTRACT}
-\addcontentsline{toc}{section}{Abstract}
 
-Load the abstract from separate `abstract.Rmd` file:
+## Abstract {.unnumbered}
+
+You can load the abstract from separate `abstract.Rmd` file:
 ````r
 `r ''````{r child = "abstract.Rmd"}
 ```
 ````
 
-<!-- Public Abstract -->
+<!-- Samenvatting: unumbered section -->
 \newpage
-\fancyhead[L]{Public Abstract}
+\fancyhead[L]{Nederlandstalige Samenvatting}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
-\chapter*{PUBLIC ABSTRACT}
-\addcontentsline{toc}{section}{Public Abstract}
 
-Publically abstracted words.
+## Nederlandstalige Samenvatting {.unnumbered}
+Ik spreek geen nederlands!
 
-<!-- Dedication -->
-\newpage
-\fancyhead[L]{Dedication}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{DEDICATION}
-\addcontentsline{toc}{section}{Dedication}
-
-Dedicate it.
-
-<!-- Acknowledgements -->
-\newpage
-\fancyhead[L]{Acknowledgments}
-\fancyhead[R]{\thepage}
-\fancyfoot[C]{}
-\chapter*{ACKNOWLEDGEMENTS}
-\addcontentsline{toc}{section}{Acknowledgments}
-
-Acknowledge them.
 
 <!-- Front Matter -->
 \newpage
@@ -113,7 +105,7 @@ Acknowledge them.
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter{INTRODUCTION}
+# Introduction
 
 Load intro from separate `introduction.Rmd` file:
 ````r
@@ -129,7 +121,7 @@ Load intro from separate `introduction.Rmd` file:
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter{Chapter 2's Title}
+# Chapter 2's Title
 
 Add some fancy table
 ```{r}
@@ -146,7 +138,7 @@ knitr::kable(data.frame('things I am about' = c('dogs', 'cats', 'ice cream'),
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter{Chapter 3's Title}
+# Chapter 3's Title
 
 Don't stop now.
 
@@ -157,7 +149,7 @@ Don't stop now.
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter{Chapter 4's Title}
+# Chapter 4's Title
 
 Keep it going.
 
@@ -168,7 +160,7 @@ Keep it going.
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter{Chapter 5's Title}
+# Chapter 5's Title
 
 Well done.
 
@@ -179,7 +171,7 @@ Well done.
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
-\chapter*{REFERENCES}
+# References {.unnumbered}
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.4in}
@@ -189,10 +181,11 @@ Well done.
 <div id="refs"></div>
 
 \clearpage
-\addcontentsline{toc}{chapter}{APPENDICES}
 \fancyhead[L]{Appendices}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
+
+# Appendices {.unnumbered}
 
 \vspace*{\fill}
   \begin{center}
@@ -212,10 +205,11 @@ Well done.
 ````
 
 \clearpage
-\addcontentsline{toc}{chapter}{CURRICULUM VITA}
 \fancyhead[L]{Vita}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
+
+# CURRICULUM VITA {.unnumbered}
 
 \vspace*{\fill}
   \begin{center}

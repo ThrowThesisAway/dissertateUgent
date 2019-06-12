@@ -241,6 +241,8 @@
     \begin{center}
 	  \singlespacing
       Universiteit Gent\\
+      Faculteit Wetenschappen\\
+      Vakgroep Fysica en Sterrenkunde\\
 	    \doublespacing
 	    \yeardegree
 	  \end{center}
